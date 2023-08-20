@@ -67,7 +67,7 @@ class ArithmeticVisitor:
             if var_name in self.variables:
                 return self.variables[var_name]
             else:
-                raise ValueError(f"Variable '{var_name}' is not defined.")
+                raise ValueError(f"A Variável '{var_name}' não foi definida.")
         else:
             return self.visit(ctx.expr())
 
@@ -75,7 +75,7 @@ def main():
     visitor = ArithmeticVisitor()
     while True:
         expression = input("Digite uma instrução ou expressão: ")
-        if expression == "exit":
+        if expression == "sair":
             break
         lexer = ArithmeticLexer(InputStream(expression))
         stream = CommonTokenStream(lexer)

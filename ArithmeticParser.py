@@ -10,21 +10,22 @@ else:
 
 def serializedATN():
     return [
-        4,1,10,49,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,1,0,1,
-        0,1,0,5,0,16,8,0,10,0,12,0,19,9,0,1,1,1,1,1,1,5,1,24,8,1,10,1,12,
-        1,27,9,1,1,2,1,2,1,2,1,2,1,2,3,2,34,8,2,1,3,4,3,37,8,3,11,3,12,3,
-        38,1,4,1,4,3,4,43,8,4,1,5,1,5,1,5,1,5,1,5,0,0,6,0,2,4,6,8,10,0,2,
-        1,0,1,2,1,0,3,4,47,0,12,1,0,0,0,2,20,1,0,0,0,4,33,1,0,0,0,6,36,1,
-        0,0,0,8,42,1,0,0,0,10,44,1,0,0,0,12,17,3,2,1,0,13,14,7,0,0,0,14,
-        16,3,2,1,0,15,13,1,0,0,0,16,19,1,0,0,0,17,15,1,0,0,0,17,18,1,0,0,
-        0,18,1,1,0,0,0,19,17,1,0,0,0,20,25,3,4,2,0,21,22,7,1,0,0,22,24,3,
-        4,2,0,23,21,1,0,0,0,24,27,1,0,0,0,25,23,1,0,0,0,25,26,1,0,0,0,26,
-        3,1,0,0,0,27,25,1,0,0,0,28,34,5,5,0,0,29,30,5,6,0,0,30,31,3,0,0,
-        0,31,32,5,7,0,0,32,34,1,0,0,0,33,28,1,0,0,0,33,29,1,0,0,0,34,5,1,
-        0,0,0,35,37,3,8,4,0,36,35,1,0,0,0,37,38,1,0,0,0,38,36,1,0,0,0,38,
-        39,1,0,0,0,39,7,1,0,0,0,40,43,3,10,5,0,41,43,3,0,0,0,42,40,1,0,0,
-        0,42,41,1,0,0,0,43,9,1,0,0,0,44,45,5,9,0,0,45,46,5,10,0,0,46,47,
-        3,0,0,0,47,11,1,0,0,0,5,17,25,33,38,42
+        4,1,10,50,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,1,0,4,
+        0,14,8,0,11,0,12,0,15,1,1,1,1,3,1,20,8,1,1,2,1,2,1,2,1,2,1,3,1,3,
+        1,3,5,3,29,8,3,10,3,12,3,32,9,3,1,4,1,4,1,4,5,4,37,8,4,10,4,12,4,
+        40,9,4,1,5,1,5,1,5,1,5,1,5,1,5,3,5,48,8,5,1,5,0,0,6,0,2,4,6,8,10,
+        0,2,1,0,1,2,1,0,3,4,49,0,13,1,0,0,0,2,19,1,0,0,0,4,21,1,0,0,0,6,
+        25,1,0,0,0,8,33,1,0,0,0,10,47,1,0,0,0,12,14,3,2,1,0,13,12,1,0,0,
+        0,14,15,1,0,0,0,15,13,1,0,0,0,15,16,1,0,0,0,16,1,1,0,0,0,17,20,3,
+        4,2,0,18,20,3,6,3,0,19,17,1,0,0,0,19,18,1,0,0,0,20,3,1,0,0,0,21,
+        22,5,9,0,0,22,23,5,10,0,0,23,24,3,6,3,0,24,5,1,0,0,0,25,30,3,8,4,
+        0,26,27,7,0,0,0,27,29,3,8,4,0,28,26,1,0,0,0,29,32,1,0,0,0,30,28,
+        1,0,0,0,30,31,1,0,0,0,31,7,1,0,0,0,32,30,1,0,0,0,33,38,3,10,5,0,
+        34,35,7,1,0,0,35,37,3,10,5,0,36,34,1,0,0,0,37,40,1,0,0,0,38,36,1,
+        0,0,0,38,39,1,0,0,0,39,9,1,0,0,0,40,38,1,0,0,0,41,48,5,5,0,0,42,
+        48,5,9,0,0,43,44,5,6,0,0,44,45,3,6,3,0,45,46,5,7,0,0,46,48,1,0,0,
+        0,47,41,1,0,0,0,47,42,1,0,0,0,47,43,1,0,0,0,48,11,1,0,0,0,5,15,19,
+        30,38,47
     ]
 
 class ArithmeticParser ( Parser ):
@@ -43,14 +44,15 @@ class ArithmeticParser ( Parser ):
     symbolicNames = [ "<INVALID>", "PLUS", "MINUS", "MUL", "DIV", "INT", 
                       "LPAREN", "RPAREN", "WS", "VAR", "ASSIGN" ]
 
-    RULE_expr = 0
-    RULE_term = 1
-    RULE_factor = 2
-    RULE_program = 3
-    RULE_statement = 4
-    RULE_assignment = 5
+    RULE_program = 0
+    RULE_statement = 1
+    RULE_assignment = 2
+    RULE_expr = 3
+    RULE_term = 4
+    RULE_factor = 5
 
-    ruleNames =  [ "expr", "term", "factor", "program", "statement", "assignment" ]
+    ruleNames =  [ "program", "statement", "assignment", "expr", "term", 
+                   "factor" ]
 
     EOF = Token.EOF
     PLUS=1
@@ -71,6 +73,173 @@ class ArithmeticParser ( Parser ):
         self._predicates = None
 
 
+
+
+    class ProgramContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def statement(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(ArithmeticParser.StatementContext)
+            else:
+                return self.getTypedRuleContext(ArithmeticParser.StatementContext,i)
+
+
+        def getRuleIndex(self):
+            return ArithmeticParser.RULE_program
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterProgram" ):
+                listener.enterProgram(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitProgram" ):
+                listener.exitProgram(self)
+
+
+
+
+    def program(self):
+
+        localctx = ArithmeticParser.ProgramContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 0, self.RULE_program)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 13 
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while True:
+                self.state = 12
+                self.statement()
+                self.state = 15 
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 608) != 0)):
+                    break
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class StatementContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def assignment(self):
+            return self.getTypedRuleContext(ArithmeticParser.AssignmentContext,0)
+
+
+        def expr(self):
+            return self.getTypedRuleContext(ArithmeticParser.ExprContext,0)
+
+
+        def getRuleIndex(self):
+            return ArithmeticParser.RULE_statement
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStatement" ):
+                listener.enterStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStatement" ):
+                listener.exitStatement(self)
+
+
+
+
+    def statement(self):
+
+        localctx = ArithmeticParser.StatementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 2, self.RULE_statement)
+        try:
+            self.state = 19
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 17
+                self.assignment()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 18
+                self.expr()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class AssignmentContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def VAR(self):
+            return self.getToken(ArithmeticParser.VAR, 0)
+
+        def ASSIGN(self):
+            return self.getToken(ArithmeticParser.ASSIGN, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(ArithmeticParser.ExprContext,0)
+
+
+        def getRuleIndex(self):
+            return ArithmeticParser.RULE_assignment
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAssignment" ):
+                listener.enterAssignment(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAssignment" ):
+                listener.exitAssignment(self)
+
+
+
+
+    def assignment(self):
+
+        localctx = ArithmeticParser.AssignmentContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_assignment)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 21
+            self.match(ArithmeticParser.VAR)
+            self.state = 22
+            self.match(ArithmeticParser.ASSIGN)
+            self.state = 23
+            self.expr()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
 
 
     class ExprContext(ParserRuleContext):
@@ -116,26 +285,26 @@ class ArithmeticParser ( Parser ):
     def expr(self):
 
         localctx = ArithmeticParser.ExprContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 0, self.RULE_expr)
+        self.enterRule(localctx, 6, self.RULE_expr)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 12
+            self.state = 25
             self.term()
-            self.state = 17
+            self.state = 30
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==1 or _la==2:
-                self.state = 13
+                self.state = 26
                 _la = self._input.LA(1)
                 if not(_la==1 or _la==2):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 14
+                self.state = 27
                 self.term()
-                self.state = 19
+                self.state = 32
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -191,26 +360,26 @@ class ArithmeticParser ( Parser ):
     def term(self):
 
         localctx = ArithmeticParser.TermContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_term)
+        self.enterRule(localctx, 8, self.RULE_term)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 20
+            self.state = 33
             self.factor()
-            self.state = 25
+            self.state = 38
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==3 or _la==4:
-                self.state = 21
+                self.state = 34
                 _la = self._input.LA(1)
                 if not(_la==3 or _la==4):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 22
+                self.state = 35
                 self.factor()
-                self.state = 27
+                self.state = 40
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -232,6 +401,9 @@ class ArithmeticParser ( Parser ):
 
         def INT(self):
             return self.getToken(ArithmeticParser.INT, 0)
+
+        def VAR(self):
+            return self.getToken(ArithmeticParser.VAR, 0)
 
         def LPAREN(self):
             return self.getToken(ArithmeticParser.LPAREN, 0)
@@ -260,195 +432,33 @@ class ArithmeticParser ( Parser ):
     def factor(self):
 
         localctx = ArithmeticParser.FactorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_factor)
+        self.enterRule(localctx, 10, self.RULE_factor)
         try:
-            self.state = 33
+            self.state = 47
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [5]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 28
+                self.state = 41
                 self.match(ArithmeticParser.INT)
                 pass
-            elif token in [6]:
+            elif token in [9]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 29
+                self.state = 42
+                self.match(ArithmeticParser.VAR)
+                pass
+            elif token in [6]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 43
                 self.match(ArithmeticParser.LPAREN)
-                self.state = 30
+                self.state = 44
                 self.expr()
-                self.state = 31
+                self.state = 45
                 self.match(ArithmeticParser.RPAREN)
                 pass
             else:
                 raise NoViableAltException(self)
 
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class ProgramContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def statement(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(ArithmeticParser.StatementContext)
-            else:
-                return self.getTypedRuleContext(ArithmeticParser.StatementContext,i)
-
-
-        def getRuleIndex(self):
-            return ArithmeticParser.RULE_program
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterProgram" ):
-                listener.enterProgram(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitProgram" ):
-                listener.exitProgram(self)
-
-
-
-
-    def program(self):
-
-        localctx = ArithmeticParser.ProgramContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_program)
-        self._la = 0 # Token type
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 36 
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while True:
-                self.state = 35
-                self.statement()
-                self.state = 38 
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 608) != 0)):
-                    break
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class StatementContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def assignment(self):
-            return self.getTypedRuleContext(ArithmeticParser.AssignmentContext,0)
-
-
-        def expr(self):
-            return self.getTypedRuleContext(ArithmeticParser.ExprContext,0)
-
-
-        def getRuleIndex(self):
-            return ArithmeticParser.RULE_statement
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatement" ):
-                listener.enterStatement(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatement" ):
-                listener.exitStatement(self)
-
-
-
-
-    def statement(self):
-
-        localctx = ArithmeticParser.StatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_statement)
-        try:
-            self.state = 42
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [9]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 40
-                self.assignment()
-                pass
-            elif token in [5, 6]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 41
-                self.expr()
-                pass
-            else:
-                raise NoViableAltException(self)
-
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class AssignmentContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def VAR(self):
-            return self.getToken(ArithmeticParser.VAR, 0)
-
-        def ASSIGN(self):
-            return self.getToken(ArithmeticParser.ASSIGN, 0)
-
-        def expr(self):
-            return self.getTypedRuleContext(ArithmeticParser.ExprContext,0)
-
-
-        def getRuleIndex(self):
-            return ArithmeticParser.RULE_assignment
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAssignment" ):
-                listener.enterAssignment(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAssignment" ):
-                listener.exitAssignment(self)
-
-
-
-
-    def assignment(self):
-
-        localctx = ArithmeticParser.AssignmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_assignment)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 44
-            self.match(ArithmeticParser.VAR)
-            self.state = 45
-            self.match(ArithmeticParser.ASSIGN)
-            self.state = 46
-            self.expr()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

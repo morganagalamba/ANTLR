@@ -1,12 +1,12 @@
 grammar Arithmetic;
 
 // Regras do Parser
-expr: term ( (PLUS | MINUS) term )* ;
-term: factor ( (MUL | DIV) factor )* ;
-factor: INT | LPAREN expr RPAREN ;
 program: statement+ ;
 statement: assignment | expr ;
 assignment: VAR ASSIGN expr ;
+expr: term ( (PLUS | MINUS) term )* ;
+term: factor ( (MUL | DIV) factor )* ;
+factor: INT | VAR | LPAREN expr RPAREN ;
 
 // Regras do Lexer
 PLUS: '+' ;
